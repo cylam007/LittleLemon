@@ -1,0 +1,362 @@
+type: collection.insomnia.rest/5.0
+name: Backend Developer Capstone
+meta:
+  id: wrk_082cb73468934145bf89de5ba21123ee
+  created: 1759941289926
+  modified: 1759941289926
+  description: ""
+collection:
+  - url: http://127.0.0.1:8000/auth/users/
+    name: User registration
+    meta:
+      id: req_89ca1eb6408a44408df9fed7507c651e
+      created: 1759941315347
+      modified: 1759941917070
+      isPrivate: false
+      description: ""
+      sortKey: -1759941315347
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_6ce18699b3f74c4fad9f1e758ef94571
+          name: username
+          value: newuser
+          description: ""
+          disabled: false
+        - id: pair_82a218e0d7cc4cd1b05ea03fa162d6e9
+          name: password
+          value: newpassword123
+          description: ""
+          disabled: false
+        - id: pair_f839168a20ef41518309fd8f03ebb799
+          name: email
+          value: newuser@example.com
+          description: ""
+          disabled: false
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api-token-auth/
+    name: Get token
+    meta:
+      id: req_2f79acc986254b43b66ddee04b103b64
+      created: 1759941370583
+      modified: 1759941913886
+      isPrivate: false
+      description: ""
+      sortKey: -1759941370583
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_725745aa505046098e1b948595dccae0
+          name: username
+          value: newuser
+          description: ""
+          disabled: false
+        - id: pair_08d560fc5f5141829322c133f4bee174
+          name: password
+          value: newpassword123
+          description: ""
+          disabled: false
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/restaurant/menu/
+    name: Create menu item
+    meta:
+      id: req_ba45c78f02cd450ca0a9cae9d9e702e3
+      created: 1759941610579
+      modified: 1759941919451
+      isPrivate: false
+      description: ""
+      sortKey: -1759941610579
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_169bb41f62eb4c949b96c54fabb6e9f4
+          name: Title
+          value: Greek Salad
+          description: ""
+          disabled: false
+        - id: pair_870e7b2869c14c6998267749da287576
+          name: Price
+          value: "12.50"
+          description: ""
+          disabled: false
+        - id: pair_73b16ec03d3147898659e9a4cf789634
+          name: Inventory
+          value: "50"
+          description: ""
+          disabled: false
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      prefix: Token
+      token: 301ba194ca753e2659fe392932afba24849bf100
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/restaurant/menu/
+    name: List all menu items
+    meta:
+      id: req_1b2dc86cd7fa44deb4075de11c318323
+      created: 1759941768981
+      modified: 1759941920876
+      isPrivate: false
+      description: ""
+      sortKey: -1759941490581
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      prefix: Token
+      token: 301ba194ca753e2659fe392932afba24849bf100
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/restaurant/menu/1/
+    name: List single menu item
+    meta:
+      id: req_74ac9fbf6b074db9be02ff2bedf7fae1
+      created: 1759941828569
+      modified: 1759941923723
+      isPrivate: false
+      description: ""
+      sortKey: -1759941828569
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      prefix: Token
+      token: 301ba194ca753e2659fe392932afba24849bf100
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/restaurant/menu/1/
+    name: Update single menu item
+    meta:
+      id: req_c6f72e7ab7404c4fa3137e80b7745af2
+      created: 1759941956470
+      modified: 1759942009778
+      isPrivate: false
+      description: ""
+      sortKey: -1759941719574
+    method: PUT
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_ef43063e52a84f328c613197e85b7f34
+          name: Title
+          value: Lemon Dessert
+          description: ""
+          disabled: false
+        - id: pair_def1e8fe7b84425183764bd5d111bccd
+          name: Price
+          value: "8.00"
+          description: ""
+          disabled: false
+        - id: pair_8e6d46717ba44f52952a4bbf501187c3
+          name: Inventory
+          value: "30"
+          description: ""
+          disabled: false
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      prefix: Token
+      token: 301ba194ca753e2659fe392932afba24849bf100
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/restaurant/menu/1/
+    name: Delete single menu item
+    meta:
+      id: req_8d66e0d18cf94da8b5b713a66d99240e
+      created: 1759942030151
+      modified: 1759942033268
+      isPrivate: false
+      description: ""
+      sortKey: -1759941774071.5
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      prefix: Token
+      token: 301ba194ca753e2659fe392932afba24849bf100
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/restaurant/booking/
+    name: List user's booking(s)
+    meta:
+      id: req_e13ae7292d67489f9aac3a270236a7b5
+      created: 1759942061039
+      modified: 1759942303267
+      isPrivate: false
+      description: ""
+      sortKey: -1759942061039
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      prefix: Token
+      token: 301ba194ca753e2659fe392932afba24849bf100
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/restaurant/booking/
+    name: Create new booking
+    meta:
+      id: req_621ffd455b6441b38a0a512ac2f7a6bb
+      created: 1759942105004
+      modified: 1759942146827
+      isPrivate: false
+      description: ""
+      sortKey: -1759942105004
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_fc02229017184330985578d9af43eba7
+          name: Name
+          value: testuser
+          description: ""
+          disabled: false
+        - id: pair_3bb6c5c63a5d4b5b9a71a5b86a0d00cf
+          name: No_of_guests
+          value: "2"
+          description: ""
+          disabled: false
+        - id: pair_d29f51e157ae4619bb90afd09530fe57
+          name: BookingDate
+          value: 2025-10-10
+          description: ""
+          disabled: false
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      token: 301ba194ca753e2659fe392932afba24849bf100
+      prefix: Token
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/restaurant/booking/1/
+    name: Delete booking
+    meta:
+      id: req_e1b0362aa4744b3194fabdb8386fb876
+      created: 1759942186233
+      modified: 1759942349872
+      isPrivate: false
+      description: ""
+      sortKey: -1759942083021.5
+    method: DELETE
+    body:
+      mimeType: application/x-www-form-urlencoded
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+      - name: User-Agent
+        value: insomnia/11.6.1
+    authentication:
+      type: bearer
+      token: 301ba194ca753e2659fe392932afba24849bf100
+      prefix: Token
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_46a2938bc16619e0f451076883eb6d042c063e9b
+    created: 1759941289939
+    modified: 1759941289939
+environments:
+  name: Base Environment
+  meta:
+    id: env_46a2938bc16619e0f451076883eb6d042c063e9b
+    created: 1759941289933
+    modified: 1759941289933
+    isPrivate: false

@@ -1,6 +1,9 @@
-from rest_framework import serializers
+# Models
 from .models import Booking, Menu
+# User model
 from django.contrib.auth.models import User
+# Serializer class
+from rest_framework import serializers
 
 class BookingSerializer(serializers.ModelSerializer):
     class Meta:
