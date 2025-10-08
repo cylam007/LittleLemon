@@ -4,6 +4,9 @@
 ## Overview
 This Django project provides RESTful APIs for menu management and table booking for the Little Lemon restaurant. It includes user authentication, browsable API, and unit tests.
 
+## Repository
+GitHub: https://github.com/cylam007/LittleLemon.git
+
 ## Setup Instructions
 1. Clone the repository
 2. Install dependencies:
@@ -106,7 +109,7 @@ Authorization: Token 301ba194ca753e2659fe392932afba24849bf100
 ### Booking Endpoints
 
 #### List Current User's Bookings
-**GET http://127.0.0.1:8000/booking/**
+**GET http://127.0.0.1:8000/restaurant/booking/**
 **Headers:**
 	- Authorization: Token 301ba194ca753e2659fe392932afba24849bf100
 **Response:**
